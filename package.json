@@ -1,0 +1,27 @@
+{
+  "name": "zavor-electron",
+  "version": "1.0.0",
+  "description": "The Zen Proliferator for PC users!",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KYUTI3/Zavor.git"
+  },
+  "author": "Luis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KYUTI3/Zavor/issues"
+  },
+  "homepage": "https://github.com/KYUTI3/Zavor#readme",
+  "devDependencies": {
+    "electron": "^24.1.2",
+    "tailwindcss": "^3.3.1"
+  },
+  "dependencies": {
+    "daisyui": "^2.51.5"
+  }
+}
