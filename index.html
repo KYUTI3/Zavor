@@ -73,6 +73,37 @@
     />
     <title>Zavor</title>
   </head>
+
+  <script src="renderer.js"></script>
+
+  <!-- <script>
+    function loadAbout() {
+      const { remote } = require('electron');
+      const url = require('url');
+      const path = require('path');
+  
+      remote.getCurrentWindow().loadURL(url.format({
+        pathname: path.join(__dirname, 'about.html'),
+        protocol: 'file:',
+        slashes: true
+      }));
+    }
+  </script>
+
+<script>
+  function loadHome() {
+    const { remote } = require('electron');
+    const url = require('url');
+    const path = require('path');
+
+    remote.getCurrentWindow().loadURL(url.format({
+      pathname: path.join(__dirname, 'home.html'),
+      protocol: 'file:',
+      slashes: true
+    }));
+  }
+</script>  -->
+
   <body>
     <div class="hero">
      <div class = "hero-content"> 
@@ -80,9 +111,16 @@
     <h1 class = "font-bold animate-[rgb_delay-75_infinite]">Zavor</h1>
   </div>
     <p class="text-emerald-400 text-lg font-bold font-mono">Zen Proliferator - On Desktop!</p>
-    <button class="btn btn-info"> <a href="./about.html"></a> Get Started! </button>
-    <button class="btn btn-outline btn-accent"> <a href="./about.html"> Learn More</a></button>
+    <div id="redirecter">
+    <button class="btn btn-info" onclick="openHome()">  Get Started! </button>
+  </div>
+    <button class="btn btn-outline btn-accent redirecter" onclick="loadHome()">Learn More</button>
     </div>
   </div> 
+  <script>
+    function openHome() {
+      homeWindow.show();
+    }
+  </script>
   </body>
 </html>
