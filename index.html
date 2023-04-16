@@ -1,7 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="styles.css" rel="stylesheet">
+    <style>
+    
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background-image: url('path/to/your/image.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Center the content vertically */
+      .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: -5rem;
+      }
+
+      /* Center the content horizontally */
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+  
+      .hero h1 {
+        font-size: 6rem;
+        color: white;
+        text-shadow: 2px 2px #000000;
+        margin-bottom: 2rem;
+      }
+
+    
+      .hero button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 1rem 2rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 0.25rem;
+        font-size: 1.25rem;
+        cursor: pointer;
+      }
+
+      .hero button:hover {
+        background-color: #3e8e41;
+      }
+
+      .hero button.btn-outline {
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+      }
+
+      .hero button.btn-outline:hover {
+        background-color: white;
+        color: black;
+      }
+    </style>
+    <link href="dist/output.css" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
@@ -14,11 +80,13 @@
     <title>Zavor</title>
   </head>
   <body>
-    <div class="flex flex-wrap justify-center">
+    <div class="hero">
+     <div class = "hero-content"> 
     <h1 class = "font-bold animate-[rgb_delay-75_infinite]">Zavor</h1>
     <p class="text-teal-300 font-bold font-mono">Zen Proliferator - On Desktop!</p>
     <button class="btn btn-info">Get Started!</button>
     <button class="btn btn-outline btn-accent">Learn More</button>
     </div>
+  </div> 
   </body>
 </html>
