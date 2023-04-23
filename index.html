@@ -34,11 +34,11 @@
         color: #04A3F8;
       }
     
-      .hero button {
-        background-color: rgb(52 211 153);;
+      .redirecter {
+        background-color: #04A3F8;
         border: none;
         color: white;
-        padding: 1rem 2rem;
+        padding: 6rem 6rem;
         margin-right: 1rem;
         margin-bottom: 1rem;
         border-radius: 0.25rem;
@@ -46,19 +46,18 @@
         cursor: pointer;
       }
 
-      .hero button:hover {
-        background-color: rgb(52 211 153);
+      .redirecter:hover {
+        background-color: #04A3F8
       }
 
-      .hero button.btn-outline {
+      .about {
         background-color: transparent;
         border: 1px solid white;
         color: white;
       }
 
-      .hero button.btn-outline:hover {
-        background-color: white;
-        color: black;
+        .about:hover {
+        background-color: rgb(52 211 153);
       }
     </style>
     <link href="dist/output.css" rel="stylesheet">
@@ -73,54 +72,28 @@
     />
     <title>Zavor</title>
   </head>
-
-  <script src="renderer.js"></script>
-
-  <!-- <script>
-    function loadAbout() {
-      const { remote } = require('electron');
-      const url = require('url');
-      const path = require('path');
-  
-      remote.getCurrentWindow().loadURL(url.format({
-        pathname: path.join(__dirname, 'about.html'),
-        protocol: 'file:',
-        slashes: true
-      }));
-    }
+<script src="renderer.js"> 
   </script>
-
 <script>
-  function loadHome() {
-    const { remote } = require('electron');
-    const url = require('url');
-    const path = require('path');
-
-    remote.getCurrentWindow().loadURL(url.format({
-      pathname: path.join(__dirname, 'home.html'),
-      protocol: 'file:',
-      slashes: true
-    }));
+  function openHome() {
+  const { remote } = require('electron');
+  document.getElementById("main").homeWindow.show();
   }
-</script>  -->
-
+</script>
   <body>
     <div class="hero">
      <div class = "hero-content"> 
       <div class="name">
-    <h1 class = "font-bold animate-[rgb_delay-75_infinite]">Zavor</h1>
-  </div>
-    <p class="text-emerald-400 text-lg font-bold font-mono">Zen Proliferator - On Desktop!</p>
+    <h1 class="font-bold animate-[rgb_delay-75_infinite]">Zavor</h1>
+      </div>
+    <p class="text-emerald-400 text-lg font-bold font-mono">The Zen Proliferator - On Desktop!</p>
     <div id="redirecter">
-    <button class="btn btn-info" onclick="openHome()">  Get Started! </button>
+    <a href="home.html" class="btn btn-info"> Get Started! </a>
   </div>
-    <button class="btn btn-outline btn-accent redirecter" onclick="loadHome()">Learn More</button>
+    <div id="about"> 
+    <a class="btn btn-outline btn-accent">Learn More</a>
+  </div>
     </div>
-  </div> 
-  <script>
-    function openHome() {
-      homeWindow.show();
-    }
-  </script>
+   </div> 
   </body>
 </html>

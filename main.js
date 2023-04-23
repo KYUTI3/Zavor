@@ -1,8 +1,9 @@
 const { app, BrowserWindow } = require('electron')
 
 let mainWindow;
+let homeWindow;
 
-const myObject = {};
+// const myObject = {};
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -17,20 +18,19 @@ const createWindow = () => {
 app.whenReady().then(() => {
   createWindow()
 
-
-  omeWindow = new BrowserWindow({
+  homeWindow = new BrowserWindow({
     width: 400,
     height: 300,
-    show: false, // Hide the window initially
-    parent: mainWindow, // Set the main window as the parent
-    modal: true, // Make the window modal
-    resizable: false, // Disable resizing
+    show: false, 
+    parent: mainWindow, 
+    modal: true, 
+    resizable: false, 
   });
   
   homeWindow.loadFile(path.join(__dirname, 'home.html'));
   
   homeWindow.on('closed', () => {
-    aboutWindow = null;
+    window = null;
   });
 
   app.on('activate', () => {
@@ -39,22 +39,6 @@ app.whenReady().then(() => {
         }
     });
 });
-
-
-
-
-
-// if (myObject && myObject.loadURL) {
-//   myObject.loadURL('https://www.example.com');
-// }
-
-// mainWindow.loadURL(
-//   url.format({
-//     pathname: path.join(__dirname, 'index.html'),
-//     protocol: 'file:',
-//     slashes: true
-//   })
-// );
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
